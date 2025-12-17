@@ -25,12 +25,6 @@ public class StudentEntity {
     public StudentEntity() {
         
     }
-    public void setId(Long id){
-        this.id = id;
-    }
-    public Long getId() {
-        return this.id;
-    }
     public void setName(String name) {
         this.name = name;
     }
