@@ -1,34 +1,9 @@
-package com.example.Springproject.Service;
+package com.example.demo.service;
 
-import org.springframework.stereotype.Service;
+import com.example.demo.entity.StudentEntity;
 
+public interface StudentService {
 
-import com.example.Springproject.Entity.StudentEntity;
-import java.util.*;
+    public StudentEntity addStudents(StudentEntity student);
 
-
-@Service
-public class StudentService {
-    Map<Integer, StudentEntity> details = new HashMap<>();
-
-
-    public StudentEntity addStudents(StudentEntity st){
-        details.put(st.getId(),st);
-        return st;
-    }
-
-    public List<StudentEntity> getAllStudents() {
-        return new ArrayList<>(details.values()) ;
-    }
-
-    public StudentEntity getStudent(int id) {
-        return details.get(id);
-    }
-
-    public StudentEntity deleteStudent(int id) {
-        details.remove(id);
-        return details.get(id);
-    }
-
-    
-}   
+}
