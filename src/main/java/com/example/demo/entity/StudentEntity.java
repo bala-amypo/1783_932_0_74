@@ -6,12 +6,12 @@ import jakarta.persistence.Entity;
 @Entity
 public class StudentEntity{
     private Long id;
-    private string name;
-    private string email;
-    private string password;
-    private float cgpa;
+    private String name;
+    private String email;
+    private String password;
+    private double cgpa;
 
-    public StudentEntity(int id,String name,String email, double cgpa){
+    public StudentEntity(Long id,String name,String email, double cgpa){
         this.id = id;
         this.name = name;
         this.email = email;
@@ -23,7 +23,7 @@ public class StudentEntity{
     }
 
     
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
